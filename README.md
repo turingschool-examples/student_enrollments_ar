@@ -79,3 +79,10 @@ Average grade: 82.5
       - Sally Field: 79
 )
 ```
+
+
+
+### Extensions
+1. Refactor any queries used in user stories to only one query per story. 
+
+(Under construction)
