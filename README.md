@@ -14,16 +14,16 @@ This repository has been tested with Ruby 2.7.4 and Rails 5.2.8.
 You will need to create all migrations. 
 
 ## Instructions
-We are creating an application to track student enrollments in our school. To do this, we'll need to track `Students`, `Classes`, `Teachers`, and `Enrollments`. 
+We are creating an application to track student enrollments in our school. To do this, we'll need to track `Students`, `Courses`, `Teachers`, and `Enrollments`. 
 
 Students have a name. 
 Teachers have a name and room_number.
-Classes have a name and teacher_id. 
+Courses have a name and teacher_id. 
 Enrollments have a student_id, class_id, and a grade (integer). 
 
-Classes have one Teacher. 
-Students can be enrolled in many Classes. 
-Classes have many Students. (The join table in this case can be called "enrollments".) 
+Courses have one Teacher. 
+Students can be enrolled in many Courses. 
+Courses have many Students. (The join table in this case can be called "enrollments".) 
 
 ## Data Setup
 - First, write migrations to fulfill the above model descriptions. 
@@ -40,8 +40,8 @@ Note: these user stories are focused on writing AR queries. If you're still work
 As a user
 When I visit a Student show page (/student/:id)
 I see the name of the student
-And I see the names of all Classes that this student enrolled in
-As well as a numeric count of the number of Classes the student is currently enrolled in
+And I see the names of all Courses that this student enrolled in
+As well as a numeric count of the number of Courses the student is currently enrolled in
 And I see the average grade across all classes that this student is enrolled in. 
 ```
 
