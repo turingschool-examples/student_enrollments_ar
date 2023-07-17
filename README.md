@@ -5,7 +5,7 @@ This repository is a reworking of the [Complex Queries workshop](https://backend
 
 RSpec, Shoulda-Matchers, and SimpleCov have been set up for you. 
 
-This repository has been tested with Ruby 2.7.4 and Rails 5.2.8. 
+This repository has been tested with Ruby 3.2.2 and Rails 7.0.6. 
 
 ## Setup
 1. `bundle install`
