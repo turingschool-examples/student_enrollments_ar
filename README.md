@@ -11,7 +11,6 @@ This repository has been tested with Ruby 3.2.2 and Rails 7.1.2.
 1. `bundle install`
 1. `rails db:{drop,create}`
 
-You will need to create all migrations. 
 
 ## Instructions
 We are creating an application to track student enrollments in our school. To do this, we'll need to track `Students`, `Courses`, `Teachers`, and `Enrollments`. Do not change the name of the columns described here or your pre-existing test data will break (see `spec_helper` test data method).
@@ -26,8 +25,8 @@ Students can be enrolled in many Courses.
 Courses have many Students. (The join table in this case can be called "enrollments".) 
 
 ## Data Setup
-- First, write migrations to fulfill the above model descriptions. 
-- Then, write model tests (there is a skeleton in the existing model specs) to set up associations between each model. Make sure your model tests are always at 100% coverage. 
+- Migrations have been set up for you. Review the migration files and the schema.
+- Then, write model tests (there is a skeleton in the existing model specs) AND model files to set up associations between each model. Make sure your model tests are always at 100% coverage. 
 
 
 ## Exercises
@@ -39,8 +38,8 @@ Note: These user stories are focused on writing AR queries. You could also try g
 
 1. Student Courses
 
-Model method returns the list of course names a student is enrolled in.
-Example: Peter (@student2) => ["Yoga", "Gym"]
+Model method returns the list of course names in which a student is enrolled in alphabetical order.
+Example: Peter (@student2) => ["Gym", "Yoga"]
 
 2. Student Course Count
 
