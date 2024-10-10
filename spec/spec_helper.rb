@@ -186,6 +186,4 @@ def test_data
   Enrollment.create!(student: @student20, course: @course1, grade: 85)
   Enrollment.create!(student: @student20, course: @course11, grade: 89)
   Enrollment.create!(student: @student20, course: @course3, grade: 98)
-
-  require 'pry'; binding.pry
 end
