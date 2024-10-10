@@ -1,4 +1,13 @@
 # Student Enrollments
+## Many to Many Practice
+
+Start by writing db migrations and setting up the M2M relationship:
+
+1. Create a courses table. Courses have a name, and belong to a teacher. Include the necessary reference to the teachers table.
+2. Create an enrollments (joins) table: Courses have many students and students can enroll in multiple courses. Each enrollment has the necessary foreign keys, and a grade (integer)
+3. Set up the necessary models and model specs with relationship assertions.
+
+
 ## Complex Queries
 
 This repository is a reworking of the [Complex Queries workshop](https://backend.turing.edu/module2/misc/complex_queries) that can be completed as SQL-only; this repository will ask the same questions but can be completed using ActiveRecord or SQL. 
