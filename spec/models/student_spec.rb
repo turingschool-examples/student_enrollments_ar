@@ -11,7 +11,7 @@ RSpec.describe Student, type: :model do
     end
 
     it "#all_courses" do
-
+      expect(@student2.all_courses).to eq(["Gym", "Yoga"])
     end
 
     it "#course_count" do
