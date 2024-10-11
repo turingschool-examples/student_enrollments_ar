@@ -2,7 +2,8 @@ require "rails_helper"
 
 RSpec.describe Student, type: :model do
   describe "relationships" do
-
+    it { should have_many :enrollments }
+    it { should have_many(:courses).through(:enrollments) }
   end
 
   describe "model methods" do
@@ -15,11 +16,11 @@ RSpec.describe Student, type: :model do
     end
 
     it "#course_count" do
-    
+      expect(@student2.course_count).to eq(2)
     end
 
     it "#all_teachers" do
-
+      expect(@student2.all_teachers.sort).to eq(["Phillips", "Mauch"].sort)
     end
   end
 end

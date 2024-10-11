@@ -1,6 +1,7 @@
 class Student < ApplicationRecord
   has_many :enrollments
   has_many :courses, through: :enrollments
+  # has_many :teachers, through: :courses
 
   def all_courses
     # AR IMPLEMENTATION
@@ -20,5 +21,16 @@ class Student < ApplicationRecord
     # even though with AR, this is run from a Student instance method. 
     result = Course.find_by_sql(sql)
     result.pluck(:name)
+  end
+
+  def course_count
+    self.courses.count
+  end
+
+  def all_teachers
+    self.courses.joins(:teacher).select("teachers.*").distinct("teachers.name").pluck("teachers.name")
+
+    # OR, with that additional association commented out above...
+    # self.teachers.distinct.pluck(:name)
   end
 end
